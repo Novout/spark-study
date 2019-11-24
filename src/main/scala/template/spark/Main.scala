@@ -8,8 +8,9 @@ object Main extends InitSpark {
   def main(args: Array[String]) = {
     import spark.implicits._
 
-    val area = reader.csv("LAG.csv").as[Area]
-    area.show(953)
+    val js = sqlContext.read.json("users.json")
+
+    js.select("color").show(1)
 
     close
   }

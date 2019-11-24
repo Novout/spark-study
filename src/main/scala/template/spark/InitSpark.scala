@@ -10,6 +10,8 @@ trait InitSpark {
                             .config("option", "some-value")
                             .getOrCreate()
 
+  spark.read.option("multiLine", "true")
+
   val sc = spark.sparkContext
   val sqlContext = spark.sqlContext
   def reader = spark.read
