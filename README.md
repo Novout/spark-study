@@ -1,3 +1,1 @@
 # Spark Scala
-
-# Teste
