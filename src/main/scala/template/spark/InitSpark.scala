@@ -7,10 +7,8 @@ trait InitSpark {
   val spark: SparkSession = SparkSession.builder()
                             .appName("Spark example")
                             .master("local[*]")
-                            .config("option", "some-value")
-                            .getOrCreate()
-
-  spark.read.option("multiLine", "true")
+                            .config("multiLine", "true-value")
+                            .getOrCreate())
 
   val sc = spark.sparkContext
   val sqlContext = spark.sqlContext
